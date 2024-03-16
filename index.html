@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        var images = ["Hugiea-bio.png", "hugiea-bio2.png"];
+var currentIndex = 0;
+var banner = document.querySelector(".banner");
+
+function changeImage() {
+  banner.src = images[currentIndex];
+  currentIndex = (currentIndex + 1) % images.length;
+}
+
+setInterval(changeImage, 2000);
+    </script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="logohugiea.png" />
+        <title> Hugia Bio</title>
+    </head>
+    <style>
+        .blink {
+            animation: blink 3s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .texte {
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Animation pour écrire le texte lettre par lettre */
+@keyframes write {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Appliquer l'animation aux éléments de texte */
+.texte.animate {
+    animation: write 10s steps(40, end);
+}
+.produit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produit img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .produit {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-menu li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+.banner {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajoutez ces règles pour rendre l'image responsive à différentes tailles d'écran */
+
+@media screen and (max-width: 768px) {
+  .banner {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.contact img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contact span {
+  font-weight: bold;
+}
+
+/* Styles spécifiques pour les différentes résolutions */
+@media screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact a {
+    margin-bottom: 10px;
+  }
+}
+    </style>
+    <body>
+        <header style="background-color: green; text-align: center; position: relative;">
+            <h1 class="blink" style="color: fuchsia;" class="titre">Hugia-bio</h1>
+        </header>
+        <section class="secImg">
+            <img class="banner" src="Hugiea-bio.png" alt="banner hugiea-bio">
+
+        </section> <br>
+        <section class="contact">
+            <a href="https://wa.me/message/BVQIPUSI4K2DE1" >
+              <img src="what.jpeg" alt="WhatsApp" title=" Contact hugiea-bio" />
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://www.facebook.com/hugieaBio">
+              <img src="face.jpeg" alt="Facebook" title=" page hugiea-bio" />
+              <span>Facebook</span>
+            </a>
+          </section> 
+        <section class="presentation">
+            <h1 class="texte animate" style="color:red">Qui est Hugia bio ?</h1> <br>
+
+            <h2 class="texte animate" style="color: red;"> Avant de commercer</h2>
+            <p>Le nom c'est <strong class="blink" style="color: fuchsia;">Hugiea-Bio</strong> est constitué de:
+            </p>
+            <ul>
+                <li>Hugiea qui veut dire santé préventive
+                </li>
+                <li>Bio: qui vient de nature.
+                </li>
+            </ul>
+            <p><span class="blink" style="color: fuchsia;"><strong>Hugiea bio : </strong></span> est une structure multi-action qui vise sur le bien-être physique, énergétique et spirituelle de quotidien humain. 
+                Il dispose les produits boy de qui peut favoriser l'équilibre de l'être. 
+                </p>
+            <p> Par son contenu thérapeutique et préventif, Hugiea-Bio met à la disposition de tous  les:</p>
+            <ul>
+                <li> Conseils sanitaires</li>
+                <li>Programmes d'enseignement pour l'assurance sanitaire 
+                </li>
+                <li>Un programme d'échange avec ses sujets
+                </li>
+                <li>Sensibilisation lié à la santé physique
+                </li>
+                <li>Vente des produits bio-sanitaire et bio-cosmétique
+                </li>
+            </ul>
+            <p>Hugiea-Bio est une assurance santé.</p>
+        </section>
+        <section class="localisation">
+            <h1 class="texte animate" style="color:red">Ou est situé <strong class="blink" style="color: fuchsia;">Hugiea-Bio </strong> ?</h1>
+            <P> <strong class="blink" style="color: fuchsia;">Hugiea-Bio </strong> est une structure dynamique et
+                 innovante basée au Cameroun, plus précisément
+                  à Yaoundé. Spécialisée dans la sous-traitance avec
+                   <strong style="color: red">LONGRICH International</strong> , elle se distingue par son engagement
+                    envers la qualité et l'excellence. Grâce à son 
+                    expertise et à son réseau de partenaires stratégiques,
+                    <strong class="blink" style="color: fuchsia;">Hugiea-Bio </strong>  offre des services de sous-traitance de premier 
+                     plan dans divers domaines, contribuant ainsi au développement 
+                     économique et social du pays. Son équipe dévouée et passionnée 
+                     travaille avec professionnalisme pour répondre aux besoins spécifiques 
+                     de chaque client et garantir la satisfaction de ces derniers.
+                      Avec une approche personnalisée et une attention particulière 
+                      aux détails,<strong class="blink" style="color: fuchsia;">Hugiea-Bio </strong>  s'efforce constamment d'innover et d'aller 
+                      au-delà des attentes pour offrir des solutions sur mesure et de qualité 
+                      supérieure. En tant que partenaire de confiance, <strong class="blink" style="color: fuchsia;">Hugiea-Bio </strong> est un acteur 
+                      clé dans le secteur de la sous-traitance au Cameroun et aspire à renforcer 
+                      sa position sur le marché international grâce à son engagement envers 
+                      l'excellence et l'intégrité.
+             </P>
+        </section>
+        <secion class="Action">
+            <h1 class="texte animate" style="color: red"> Que fait <strong class="blink" style="color: fuchsia;">Hugiea-Bio </strong> </h1>
+            <p>
+                <span class="blink" style="color: fuchsia;">Hugiea-Bio</span> propose
+                 une gamme de services dans le domaine de la santé et
+                  du bien-être, notamment :
+            </p>
+            <ul>
+                <li>
+                    <strong style="color: red;">Conseils sanitaires :</strong> <span class="blink" style="color: fuchsia;">Hugiea-Bio</span> offre des conseils personnalisés en matière de santé pour 
+                    aider ses clients à maintenir un mode de vie sain et équilibré.
+                </li>
+                <li>
+                    <strong style="color: red;">Programmes d'enseignement pour l'assurance sanitaire :</strong>  L'entreprise propose des
+                     programmes éducatifs visant
+                     à sensibiliser les individus à l'importance de la santé et de l'hygiène.
+                </li>
+                <li>
+                    <strong style="color: red;">Programme d'échange avec ses sujets :</strong>  <span class="blink" style="color: fuchsia;">Hugiea-Bio</span> favorise l'échange d'informations et
+                     d'expériences avec ses clients 
+                    pour les accompagner dans leur parcours vers le bien-être.
+                </li>
+                <li>
+                    <strong style="color: red;">Sensibilisation liée à la santé physique :</strong>  L'entreprise organise des campagnes de 
+                    sensibilisation pour promouvoir une meilleure compréhension
+                     des enjeux liés à la santé physique.
+                </li>
+                <li>
+                    <strong  style="color: red;"> Vente de produits bio-sanitaires et bio-cosmétiques :</strong> <span class="blink" style="color: fuchsia;">Hugiea-Bio</span> propose une
+                     sélection de produits naturels et biologiques pour
+                     répondre aux besoins en matière d'hygiène et de beauté de sa clientèle.
+                </li>
+            </ul>
+            <p>
+                En combinant ces différents services, <span class="blink" style="color: fuchsia;">Hugiea-Bio</span> s'engage à promouvoir la santé,
+                 le bien-être et la beauté de ses clients,
+                 tout en contribuant à un mode de vie plus sain et durable.
+            </p>
+        </secion>
+        <section class="produit">
+            <p>Découvrez nos produits bio de qualité supérieure : produits laitiers,
+                 épicerie fine, cosmétiques naturels et bien plus encore !</p> <br>
+                 <h2>Cordyceps militaris</h2><br>
+                 <a href="https://wa.me/message/BVQIPUSI4K2DE1">
+                    <img class="produit" src="Produit1.jpg" alt="Cordyceps militaris" title="Cordyceps militaris">
+                </a><br>
+                <h1 > Description</h1>
+                <p>Le Cordyceps Militaris est un puissant antibiotique naturel utilisé dans 
+                    le traitement d'un large éventail d'infections causées par des bactéries telles
+                     que la tuberculose, le staphylocoque, etc. Il augmente l'apport d'oxygène au cerveau.
+                      Il améliore les capacités mentales et tonifie les reins en améliorant les fonctions 
+                      rénales, ce qui aide à réduire les dommages causés par les substances toxiques sur
+                       les reins.</p><br>
+    
+                      <h1 > Prix : 90 000 Fcfa</h1> <br>
+                <a href="https://wa.me/message/BVQIPUSI4K2DE1" >Acheter</a> <br>
+
+                <h2> Libao</h2><br>
+                 <a href="https://wa.me/message/BVQIPUSI4K2DE1">
+                    <img class="produit" src="Produit2.jpg" alt="Libao" title="libao">
+                </a> <br>
+                <h1 > Description</h1> <br>
+                <p>Ce produit est spécialement formulé pour les hommes afin d'améliorer
+                     les performances sexuelles et le mode de vie aisni que la qualité et 
+                     la quantité des spermatozoïdes
+
+                    Renforce le système immunitaire.
+                    
+                    Élimine la fatigue et les vertiges
+                    
+                    Convenable pour les hommes souffrant de déficience immunitaire et fatigue chronique.
+                    
+                    Utilisez contre la courbure et l’Arthrose</p>
+
+                      <h1 > Prix : 30 000 Fcfa</h1>
+                <a href="https://wa.me/message/BVQIPUSI4K2DE1" >Acheter</a>
+                <h2> Mengqian</h2>
+                 <a href="https://wa.me/message/BVQIPUSI4K2DE1">
+                    <img class="produit" src="Produit3.jpg" alt="Mengqian" title="Mengqian">
+                </a>
+                <h1 > Description</h1>
+                <p>Supplément hormonal de fertilité pour femme.
+                     Il améliore la vue et combat la sénilité. Il est efficace contre
+                      les maladies de la peau et l’arthrose. Il peut être efficace dans 
+                      le traitement de l’épilepsie et l’hypertension</p>
+
+                      <h1 > Prix : 30 000 Fcfa</h1>
+                <a href="https://wa.me/message/BVQIPUSI4K2DE1" >Acheter</a>
+                <h2>Cordysceps militaris+gingembre noir</h2>
+                 <a href="https://wa.me/message/BVQIPUSI4K2DE1">
+                    <img class="produit" src="Produit4.jpg" alt="Cordysceps militaris+gingembre noir" title="Cordysceps militaris+gingembre noir">
+                </a>
+                <h1 > Description</h1>
+                <p>Cordysceps militaris+gingembre noir  permet d'augmenter la libibo et la fertilité, 
+                    protège des reins et de la prostate. Il augmente la force physique et vous procure 
+                    une érection matinale. Son efficacité est
+                     testé jusqu'à 72 heures. Ces capsules sont des comprimés de mélange d'énergie.</p>
+
+                      <h1 > Prix : 90 000 Fcfa</h1>
+                <a href="https://wa.me/message/BVQIPUSI4K2DE1" >Acheter</a>
+                <h2>Arthro SupReviver </h2>
+                 <a href="https://wa.me/message/BVQIPUSI4K2DE1">
+                    <img class="produit" src="Produit5.jpg" alt="Cordysceps militaris+gingembre noir" title="Cordysceps militaris+gingembre noir">
+                </a>
+                <h1 > Description</h1>
+                <p> Arthro SupReviver (Glucosamine and chondroitin) est un supplément 
+                    révolutionnaire qui réduit l'inflammation et soulage les douleurs 
+                    articulaires chroniques.  
+
+                    Traitement efficace de l’AVC, les patients cardiaques et 
+                    pour tous ceux qui souffrent de douleurs chroniques dues aux problèmes
+                     d’arthrites, d’arthroses, rhumatisme et douleurs articulaires.</p>
+
+                      <h1 > Prix : 25 000 Fcfa</h1>
+                <a href="https://wa.me/message/BVQIPUSI4K2DE1" >Acheter</a>
+
+                <h2>Kangen water</h2>
+                 <a href="https://wa.me/message/BVQIPUSI4K2DE1">
+                    <img class="produit" src="Produit6.jpg" alt="Cordysceps militaris+gingembre noir" title="Cordysceps militaris+gingembre noir">
+                </a>
+                <h1 > Description</h1>
+                <p> Plusieurs fabricants proposent des fontaines à eau Kangen ou eau ionisée.
+                     Cette eau aurait d’infinies vertus, serait idéale pour les sportifs,
+                      aurait un pouvoir thérapeutique…
+
+                    L’eau Kangen est commercialisée comme étant une “eau détoxifiante”.
+                     Mais qu’en est-il exactement ? D'où vient cette eau, comment fonctionne-elle 
+                     et est-elle vraiment efficace ?</p>
+
+                     Antioxydante <br>
+Purifiée <br>
+Avec des clusters (grappes) de molécules, en gros une eau avec plus de molécules d’eau <br>
+Meilleure hygiène corporelle <br>
+Nettoyage facilité des tissus, tapis… <br>
+Prévient le cancer <br>
+Améliore les performances sportives <br>
+Améliore les fonctions hépatiques (foie) etl ’,eau Kangen et les reins seraient uen association miraculeuse <br>
+Améliore le taux de cholestérol et ll'hypertension <br>
+Diminue les risques d’infarctus <br>
+Soigne les maladies de peau <br>
+Soigne l’asthme <br>
+Soigne les maladies auto-immunes <br>
+Améliore l’arthrose <br>
+Améliore la maladie de Crohn <br>
+Empêche les nausées chez la femme enceinte <br>
+etc
+
+                      <h1 > Prix : 10 000 Fcfa</h1>
+                <a href="https://wa.me/message/BVQIPUSI4K2DE1" >Acheter</a>
+
+
+
+        </section> <BR> <BR>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2024 Hugiea Bio. Tous droits réservés.</p>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html">Produits</a></li>
+                        <li><a href="index.html">À propos</a></li>
+                        <li><a href="https://wa.me/message/BVQIPUSI4K2DE1">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var images = ["Hugiea-bio.png", "hugiea-bio2.png"];
+            var currentIndex = 0;
+            var banner = document.querySelector(".banner");
+        
+            function changeImage() {
+                banner.src = images[currentIndex];
+                currentIndex = (currentIndex + 1) % images.length;
+                setTimeout(changeImage, 7000);
+            }
+        
+            changeImage(); // Appel initial pour démarrer le changement d'image
+        </script>
+        
+    </body>
+</html>
